@@ -1,0 +1,19 @@
+{
+  "example1-description": "Created when you already have a GitHub repo, cloned it to your system, and ran yarn init -y",
+  "example1": {
+    "name": "<name-of-your-github-repo>",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "<github-url-to-your-repo>",
+    "author": "<your-name>",
+    "license": "MIT"
+  },
+
+  "example2-description": "Created when you ran yarn init -y directly inside a plain empty folder created on your system",
+  "example2": {
+    "name": "New folder",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+}
