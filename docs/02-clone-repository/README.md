@@ -139,4 +139,5 @@ From this point onward:
 
 ---
 
+> Back Step: **[Create Github Repository](../01-create-github-repo/README.md)**
 > Next Step: **[Initialize Node Project](../03-initialize-node-project/README.md)**
