@@ -44,6 +44,12 @@ git config --list
 ```
 This will show your configured username, email, and other Git settings.
 
+Or use this commands to see specific - email & name
+```
+git config user.name
+git config user.email
+```
+
 ---
 
 ## 4️⃣ Authenticate with GitHub
@@ -60,3 +66,7 @@ GitHub no longer allows password authentication, so you must use one of the foll
 To securely authenticate with GitHub using SSH, you need to create an SSH key on your system and add it to your GitHub account.
 
 You can follow the official [GitHub documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+---
+
+> [Back to Clone Repository](./README.md) 

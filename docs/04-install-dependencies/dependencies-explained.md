@@ -160,4 +160,4 @@ Formatting debates waste time. Prettier ends them. You write the logic, Prettier
 
 ---
 
-> ← Back to [Step 04 — Install Essential Dependencies](./Step-04.md)
+> ← Back to [Install Essential Dependencies](./Step-04.md)

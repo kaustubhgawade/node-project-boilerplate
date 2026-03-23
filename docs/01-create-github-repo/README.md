@@ -13,7 +13,6 @@ Before we write a single line of code, we need a **home for our project**.
 That home will be a **GitHub repository**.
 
 You can think of a repository as a **project folder on the internet** where:
-
 - your code lives
 - your project history is stored
 - you can safely track changes over time
@@ -26,7 +25,6 @@ If **Git** is the **version control engine**, then **GitHub** is the **garage wh
 ## What You Will Learn in This Step
 
 In this step we will learn how to:
-
 - create a new GitHub repository
 - choose a good repository name
 - write a clear project description
@@ -34,8 +32,6 @@ In this step we will learn how to:
 - add important files like `README`, `.gitignore`, and a `LICENSE`
 
 By the end of this step, you will have a **clean project container ready for development**.
-
----
 
 Now let's create our repository.
 
@@ -47,8 +43,8 @@ Go to [github.com](https://github.com) and make sure you're logged into your acc
 
 To create a new repository, you have two options:
 
-1. In the **top-right corner**, click the **"+" icon** and select: **New repository**. It will redirect you to a new page 
-2. Or go directly to [github.com/new](https://github.com)
+- In the **top-right corner**, click the **"+" icon** and select: **New repository**. It will redirect you to a new page
+- Or go directly to [github.com/new](https://github.com/new)
 
 Both will take you to the new repository form.
 
@@ -56,7 +52,7 @@ Both will take you to the new repository form.
 
 ## 2. Choose an Owner and Repository Name
 
-On the form, you'll see two fields side by side — Owner and Repository name.
+On the form, you'll see two fields side by side — Owner and Repository name (both required)*.
 
 **Owner** — By default, this is set to your own GitHub account. In 99% of cases, you can leave this as-is. You'd only change it if you're creating the repo under a GitHub Organization (e.g., a company or team account) instead of your personal account.
 
@@ -73,8 +69,6 @@ A few good examples:
 > 💡 Tip: Avoid vague names like project1 or test-repo — they make it harder to find and manage your repos later.  
 
 > 💡 Tip: If your repo name has two or more words, separate them with a hyphen (-) and keep everything lowercase — for example, my-portfolio instead of myPortfolio or My_Portfolio. This is known as kebab-case and is the preferred naming convention for GitHub repositories (though not mandatory).
-
----
 
 > 📘 **Want to learn how to choose better repository names?**  
 > See: **[MORE.md → Choosing Good Repository Names](./MORE.md#choosing-good-repository-names)**
@@ -157,16 +151,12 @@ It typically explains things like:
 
 For now, we simply want GitHub to **create the file for us**, so make sure you **check this option**.
 
----
-
 > ⚠️ **Note**
 >
 > If you skip this step, GitHub will create an **empty repository** and show you a setup page with several Git commands.
 >
 > This can look a bit intimidating if you're new to Git.  
 > Initializing the repository with a README keeps things **simple and beginner-friendly**.
-
----
 
 ### When You Might Skip This Option
 
@@ -201,25 +191,20 @@ Things like:
 This is where .gitignore comes in. It's a simple file that tells Git: "Hey, ignore these files and folders — don't track them, don't upload them." Anything listed in .gitignore stays on your machine and never makes it into your repository.
 
 Why does this matter?
-
 - **Security:** You never want to accidentally push your .env file with secret keys to a public repo. It happens more often than you'd think, and it's a painful mistake to fix.
 - **Cleanliness:** Nobody wants to see node_modules/ with its 50,000 files cluttering your repository.
 - **Size:** node_modules/ alone can be hundreds of MBs. GitHub is not the place for it — anyone who clones your project can just run npm install and get it back instantly.
 
 
-How GitHub helps you here:
+How GitHub helps you here:   
 When creating your repository, GitHub lets you select a .gitignore template based on your project type. Since this is a Node.js project, select Node from the dropdown.
 GitHub will automatically create a .gitignore file in your repo pre-filled with all the files and folders that should be ignored in a typical Node.js project — node_modules/, npm-debug.log, .env, build directories, and more. You don't have to write it from scratch.
 
-💡 Tip: Even if you're not sure what half the entries in the .gitignore file mean right now — don't worry. The Node template has you covered for the most common cases. You can always add more entries later as your project grows.
+> 💡 Tip: Even if you're not sure what half the entries in the .gitignore file mean right now — don't worry. The Node template has you covered for the most common cases. You can always add more entries later as your project grows.
 
+> ⚠️ Note: If you forget to add a .gitignore and accidentally push node_modules/ or .env to GitHub, don't panic — but do fix it immediately. Removing tracked files from Git history is possible but messy. It's much easier to get it right from the start.
 
-⚠️ Note: If you forget to add a .gitignore and accidentally push node_modules/ or .env to GitHub, don't panic — but do fix it immediately. Removing tracked files from Git history is possible but messy. It's much easier to get it right from the start.
-
-> Curious about what the Node.js [.gitignore](../../examples/.gitignore) template actually looks like? See an example here.
-Select:
-
-> Want to understand .gitignore in depth? [Learn more here](./MORE.md).
+> Curious about what the Node.js `.gitignore` template actually looks like? See an example [here](../../examples/.gitignore). Want to understand `.gitignore` in depth? [Learn more here](./MORE.md).
 
 ---
 
@@ -231,7 +216,7 @@ For most personal projects, learning repos, and open-source tools, MIT License i
 
 ### Quick License Comparison
 
-| License | Use & Modify | Commercial Use | Must Open Source Changes |
+| License | Use & Modify | Commercial Use | Forces Project to be Open Source |
 |---|---|---|---|
 | **MIT** | ✅ | ✅ | ❌ |
 | **Apache 2.0** | ✅ | ✅ | ❌ |
@@ -241,9 +226,7 @@ For most personal projects, learning repos, and open-source tools, MIT License i
 **Apache 2.0** → Similar to MIT but includes additional **patent protection**.  
 **GPL** → Ensures that any modified versions of the project must also remain **open source**.
 
-> 💡 **Tip**
->
-> If you're unsure which license to choose, **MIT is usually the safest and simplest option for most personal and open-source projects.**
+> 💡 **Tip:**  If you're unsure which license to choose, **MIT is usually the safest and simplest option for most personal and open-source projects.**
 >
 > ⚠️ Note: If your repo is private, or contains sensitive/company code, you can skip the license entirely.
 

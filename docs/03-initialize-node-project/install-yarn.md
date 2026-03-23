@@ -40,3 +40,7 @@ yarn --version
 You should see a version number like 1.22.22 (or newer).
 
 🎉 That's it! You're ready to use Yarn for your projects.
+
+---
+
+> Back to [Initialize the Node Project](./README.md)

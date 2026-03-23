@@ -8,7 +8,7 @@
 
 ---
 
-In the previous step, we initialized our Node.js project by running `npm init`, which created our `package.json` file.
+In the previous step, we initialized our Node.js project by running `yarn init`, which created our `package.json` file.
 
 Think of `package.json` as the **identity card of your project** — it holds the project name, version, scripts, and most importantly, the list of all packages your project depends on.
 
@@ -21,14 +21,13 @@ That changes in this step.
 ## What You Will Learn in This Step
 
 In this step we will learn how to:
-
 - understand the difference between `dependencies` and `devDependencies`
 - install runtime packages like `dotenv`, `winston`, `axios`, `uuid`, and `cors`
 - install development tools like `typescript`, `@types/node`, `nodemon`, `eslint`, and `prettier`
 - understand what each package does and why we need it
 - verify that all packages are installed correctly
 
-By the end of this step, you will have all the **essential packages installed and ready**, so your Node.js project is set up for both development and production.
+By the end of this step, you will have all the **essential packages installed and ready**, so your Node.js project is one step ahead to set up for both development and production.
 
 ---
 
@@ -36,25 +35,17 @@ By the end of this step, you will have all the **essential packages installed an
 
 Before we install anything, we need to understand **where** each package belongs — and why it matters.
 
----
-
 ### The Analogy: Building a House
 
 Imagine you are **constructing a house**.
 
 You need two kinds of things:
-
-**Things that become part of the finished house:**
-- bricks, cement, wiring, plumbing, windows
-
-**Tools you use only during construction:**
-- a drill machine, scaffolding, a spirit level, a measuring tape
+- **Things that become part of the finished house:** bricks, cement, wiring, plumbing, windows
+- **Tools you use only during construction:** a drill machine, scaffolding, a spirit level, a measuring tape
 
 Once the house is built and someone moves in, they don't need the drill machine. The drill was only needed **while building**. But the wiring? That stays — the house cannot function without it.
 
 Node.js works exactly the same way.
-
----
 
 ### Mapping It to Node.js
 
@@ -68,8 +59,6 @@ Node.js works exactly the same way.
 - **`dependencies`** → packages your app needs to **run** in production
 - **`devDependencies`** → packages you only need **while developing** — they never go to production
 
----
-
 ### A Concrete Example
 
 Let's say your app reads a secret database password from a `.env` file using `dotenv`.
@@ -82,12 +71,11 @@ Now think about `nodemon` — it watches your files and auto-restarts the server
 Does your **production server** need to watch for file changes and restart itself?
 Absolutely not. That is purely a **developer convenience tool** → it belongs in **`devDependencies`**.
 
----
 
 ### How yarn Knows the Difference
 
 When you install a package, you tell yarn exactly where to put it:
-```bash
+```
 # installs into dependencies
 yarn add dotenv
 
@@ -96,7 +84,7 @@ yarn add -D nodemon
 ```
 
 And your `package.json` will reflect this clearly:
-```json
+```
 {
   "dependencies": {
     "dotenv": "^16.4.5"
@@ -107,13 +95,11 @@ And your `package.json` will reflect this clearly:
 }
 ```
 
----
-
 ### Why Does This Actually Matter?
 
 When you deploy your app to a server (say, an AWS EC2 instance or a Docker container),
 you typically run:
-```bash
+```
 yarn install --production
 ```
 
@@ -125,7 +111,6 @@ The result? A **leaner, faster, and more secure** production build.
 > packing your drill machine when you move into your finished house.
 > You just don't need it there.
 
----
 
 ### Quick Rule of Thumb
 
@@ -142,17 +127,18 @@ Ask yourself one question before installing any package:
 
 Now that we understand the difference between `dependencies` and `devDependencies`, let's get everything installed.
 
+
 ### Runtime Dependencies
 
 These are the packages your app needs to **run in production**.
-```bash
+```
 yarn add dotenv winston axios uuid cors
 ```
 
 ### Development Dependencies
 
 These are the tools you need **only during development**.
-```bash
+```
 yarn add -D typescript @types/node nodemon eslint prettier
 ```
 
@@ -173,7 +159,7 @@ Once both commands finish, you will see a `node_modules/` folder in your project
 >
 > If you find a package that fits your needs better, swapping it out is straightforward:
 >
-> ```bash
+> ```
 > # remove the existing package
 > yarn remove <package-name>
 >
@@ -187,7 +173,7 @@ Once both commands finish, you will see a `node_modules/` folder in your project
 >
 > For example, if you prefer `pino` over `winston` for logging:
 >
-> ```bash
+> ```
 > yarn remove winston
 > yarn add pino
 > ```
@@ -221,11 +207,8 @@ Once both commands finish, you will see a `node_modules/` folder in your project
 > It is very common to install a package early in development, experiment with it, and then never actually use it in the final code. Those unused packages still get installed on your production server, increasing build size and introducing unnecessary surface area for potential vulnerabilities.
 > 
 > Before you deploy, audit your dependencies and remove anything you are not using:
-> ```bash
-> # remove an unused dependency
-> yarn remove <package-name>
-> 
-> # remove an unused dev dependency
+> ```
+> # remove an unused dependency / dev dependency
 > yarn remove <package-name>
 > ```
 > 
@@ -279,4 +262,5 @@ That's it for this step. Your project now has all the essential packages in plac
 ---
 
 > Back Step: **[Initialize Node Project](../03-initialize-node-project/README.md)**
+
 > Next Step: **[TypeScript Setup](../05-typescript-setup/README.md)**

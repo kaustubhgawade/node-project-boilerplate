@@ -13,9 +13,9 @@
 ---
 
 ## What is package.json?
-Think of `package.json` as the identity card of your Node.js project. Just like how a passport holds all the essential information about a person — name, nationality, date of birth — package.json holds all the essential information about your project: what it's called, what version it's on, who wrote it, what scripts you can run, and most importantly, what other packages and tools it depends on to function.   
+Think of `package.json` as the identity card of your Node.js project. Just like how a passport holds all the essential information about a person — name, nationality, date of birth — `package.json` holds all the essential information about your project: what it's called, what version it's on, who wrote it, what scripts you can run, and most importantly, what other packages and tools it depends on to function.   
 
-Here's another way to think about it. Imagine you're writing a recipe. The recipe doesn't contain the actual ingredients — it just lists them with the right quantities so that anyone who reads it knows exactly what to buy. package.json works the same way. It doesn't contain your dependencies inside it, it just lists them so that anyone who clones your project can run a single command and get everything they need installed automatically.
+Here's another way to think about it. Imagine someone new joins your team. On their first day, you hand them a document that says: "This project is called X. It runs on Node.js. These are the tools you need installed. Run this command to start it." That document is package.json. It contains everything a new person — or a new machine — needs to know to get up and running with your project from scratch.
 
 ---
 
@@ -25,8 +25,9 @@ In Node.js, almost every project relies on external packages — libraries and t
 
 These packages live inside your `node_modules/` folder. But as you already know from the `.gitignore` section, `node_modules/` never gets pushed to GitHub — it's too large and completely unnecessary to share. So the question is: when someone clones your project, how do they know which packages to install?
 
-The answer is `package.json`. It keeps a record of every package your project needs, along with the version ranges that are known to work. Anyone who clones your repo just runs `yarn install` (or `npm install`) and the entire `node_modules/` folder gets recreated on their machine automatically — no manual tracking needed.
-Beyond dependencies, `package.json` also lets you define scripts — shortcuts for common commands. Instead of typing out a long command every time you want to start your server, you can define it once in `package.json` and just run yarn start from that point on.
+The answer is `package.json`. It keeps a record of every package your project needs, along with the version ranges that are known to work. Anyone who clones your repo just runs `yarn install` (or `npm install`) and the entire `node_modules/` folder gets recreated on their machine automatically — no manual tracking needed.   
+
+Beyond dependencies, `package.json` also lets you define scripts — shortcuts for common commands. Instead of typing out a long command every time you want to start your server, you can define it once in `package.json` and just run `yarn start` from that point on.
 
 ---
 
@@ -50,7 +51,7 @@ yarn --version
 
 If you see a version number printed out (e.g. 1.22.19), you're good to go. If you get an error saying the command is not found, you'll need to install Yarn first.
 
-> ⚠️ If Yarn isn't installed yet, refer to this first: [How to install Yarn](./Install_Yarn.md)
+> ⚠️ If Yarn isn't installed yet, refer to this first: [How to install Yarn](./install-yarn.md)
 
 ---
 
@@ -60,9 +61,9 @@ Before we jump into initializing your project, here's a quick reference for the 
 
 - `yarn -v` checks which version of Yarn is installed on your system (short for `yarn --version`).
 - `yarn init` creates a new package.json file in your project by walking you through a few simple questions about your project.
-- `yarn add` <package-name> installs a package and adds it to your package.json as a dependency — meaning it's required for your project to run in production.
-- `yarn add` <package-name> -D installs a package as a dev dependency, meaning it's only needed during development and not in production. Tools like nodemon or testing libraries are good examples of dev dependencies.
-- `yarn remove` <package-name> uninstalls a package and removes it from your package.json.
+- `yarn add <package-name>` installs a package and adds it to your package.json as a dependency — meaning it's required for your project to run in production.
+- `yarn add <package-name> -D` installs a package as a dev dependency, meaning it's only needed during development and not in production. Tools like nodemon or testing libraries are good examples of dev dependencies.
+- `yarn remove <package-name>` uninstalls a package and removes it from your package.json.
 - `yarn install` reads your package.json and installs all the listed dependencies. This is the command anyone would run after cloning your project.
 
 > 💡 Tip: The -D flag is short for --dev. Keeping your dev dependencies separate from your regular dependencies is a good habit — it keeps your production environment lean and clean
@@ -257,4 +258,5 @@ If you're curious about what `yarn init -y` would have produced instead — with
 ---
 
 > Back Step: **[Clone Repository](../02-clone-repository/README.md)**
+
 > Next Step: **[Initialize Node Project](../04-install-dependencies/README.md)**

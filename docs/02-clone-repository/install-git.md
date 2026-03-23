@@ -65,3 +65,7 @@ If Git is installed correctly, you should see something like:
 ```
 git version 2.xx.x
 ```
+
+---
+
+> [Back to Clone Repository](./README.md) 

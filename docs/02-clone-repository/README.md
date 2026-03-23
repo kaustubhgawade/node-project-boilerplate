@@ -18,7 +18,6 @@ We write code on our local machine (our laptop or desktop).
 So the next step is simple: We need to bring a copy of that GitHub repository to our computer. This process is called **cloning**.
 
 Cloning downloads the complete repository to your machine, including:
-
 - project files
 - commit history
 - branches
@@ -37,7 +36,7 @@ Because of this connection, later we can use commands like:
 * `git push` → send our changes to GitHub
 * `git pull` → download updates from GitHub
 
-Don't worry about those commands yet — we’ll learn them later.
+Don't worry about those commands yet — learning git commands is a chapter in its entirity & could be easily learnt on internet.
 
 For now, we just want to **get the repository onto our computer**.
 
@@ -46,7 +45,6 @@ For now, we just want to **get the repository onto our computer**.
 ## What You Will Learn in This Step
 
 In this step we will learn how to:
-
 - clone a repository from GitHub to your local machine
 - understand the repository URL
 - use the `git clone` command
@@ -65,8 +63,8 @@ On your repository page, click the green "Code" button. Make sure you're on the 
 
 > ⚠️ Note: This method requires Git to be installed on your system and your Git identity configured. If you haven't done that yet, refer to these first:  
 > 
-> [How to install Git](./Install_Git.md)  
-> [How to configure Git](./Configure_Git.md)
+> [How to install Git](./install-git.md)  
+> [How to configure Git](./configure-git.md)
 
 Once Git is ready, open your `git bash` terminal and run:
 bash
@@ -120,7 +118,6 @@ There will also be another important folder:
 This folder is usually **hidden** because it contains Git’s internal data.
 
 It stores things like:
-
 * commit history
 * branch information
 * repository metadata
@@ -132,12 +129,12 @@ Congratulations 🎉
 You now have a **local copy of your GitHub repository**.
 
 From this point onward:
-
 * You will **write code locally**
 * Use Git to **track your changes**
 * And later **push your work back to GitHub**
 
 ---
 
-> Back Step: **[Create Github Repository](../01-create-github-repo/README.md)**
+> Back Step: **[Create Github Repository](../01-create-github-repo/README.md)**   
+
 > Next Step: **[Initialize Node Project](../03-initialize-node-project/README.md)**
