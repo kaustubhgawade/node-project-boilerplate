@@ -102,14 +102,15 @@ TypeScript is a development tool. It exists entirely to help you write better co
 
 As projects grow, three things happen:
 
-**Codebases get large.** When you have 50 files and 10,000 lines of code, you cannot hold everything in your head. Types act as documentation that never goes stale — you can look at a function signature and instantly know what it expects and what it returns.   
-**Teams get larger.** When multiple developers work on the same codebase, someone will eventually call your function with the wrong arguments. TypeScript makes that impossible to miss — the compiler catches it before the code is even committed.   
-**Refactoring becomes safe.** Imagine renaming a field that is used in 30 different places across your codebase. In JavaScript, you find out you missed one only when it breaks in production. In TypeScript, the compiler tells you every single place that needs to change — before you ship anything.   
+- **Codebases get large.** When you have 50 files and 10,000 lines of code, you cannot hold everything in your head. Types act as documentation that never goes stale — you can look at a function signature and instantly know what it expects and what it returns.   
+- **Teams get larger.** When multiple developers work on the same codebase, someone will eventually call your function with the wrong arguments. TypeScript makes that impossible to miss — the compiler catches it before the code is even committed.   
+- **Refactoring becomes safe.** Imagine renaming a field that is used in 30 different places across your codebase. In JavaScript, you find out you missed one only when it breaks in production. In TypeScript, the compiler tells you every single place that needs to change — before you ship anything.   
 
 This is why every serious production Node.js project today uses TypeScript. It is not a preference. It is the difference between code that scales and code that becomes a liability.
 
 ## What is `tsconfig.json` and Why Does It Exist
 When you install TypeScript and write your first .ts file, TypeScript does not just automatically know what to do with it.  
+
 It does not know:
 - where your source files are
 - where to put the compiled output
@@ -126,7 +127,7 @@ Imagine you hire a new developer and sit them down at the desk. They are skilled
 `tsconfig.json` is that briefing. It is the set of instructions you give to the TypeScript compiler before it touches a single file.
 Without it, the compiler either refuses to work or makes assumptions — and compiler assumptions in a production project are never a good thing.
 
-*When you run npx tsc --init in the next step, TypeScript will generate this file for you automatically. We will then go through each field together — and for every single one, we will understand why it is there before we set it.*
+*When you run yarn tsc --init in the next step, TypeScript will generate this file for you automatically. We will then go through each field together — and for every single one, we will understand why it is there before we set it.*
 
 ---
 
@@ -216,7 +217,7 @@ Replace the entire contents of the generated file with this:
 }
 ```
 Save the file.
-> We will now go through every single field in this config — what it does, why it is there, and why we chose the value we did. Head over to TypeScript Config Deep Dive → to continue.
+> 🎯 These are the most commonly used fields you will need when starting out with TypeScript in a Node.js project. This config is a solid foundation — it covers the essentials and will get you up and running without any friction. As your project grows and your requirements change, you can always come back and tweak it.
 
 ---
 
@@ -247,7 +248,7 @@ You just need to know **where to find the answers**.
 ### 🔍 Where to Look When You're Stuck
 
 Your first stop should always be:
-👉 **The official TypeScript documentation (TSConfig Reference)**
+👉 **The official [TypeScript documentation](https://www.typescriptlang.org/docs/)**
 
 It’s honestly one of the best-written pieces of documentation out there — clear, detailed, and packed with practical examples. 📖✨
 
@@ -264,4 +265,18 @@ Because learning isn’t linear. Sometimes a concept only clicks after hearing i
 
 🌱 The Only Thing That Matters, at the end of the day: **Just keep going.** That’s it. That’s the whole game.
 
-If you still feel the hunger to learn more, refer to 👉 [TypeScript Config Deep Dive](./typescript-config-explained.md)
+----
+
+Refer this [tsconfig explaination](./typescript-config-explained.md) to know more about what we have configured in the project
+
+---
+
+Congratulations 🎉
+
+That's it for the TypeScript config deep dive. You now know exactly what every field in your `tsconfig.json` does and why it is there.
+
+---
+
+> Back Step: **[TypeScript Setup](../04-install-dependencies/README.md)**
+
+> Next Step: **[Prettier Setup](../06-prettier-setup/README.md)**
