@@ -277,6 +277,6 @@ That's it for the TypeScript config deep dive. You now know exactly what every f
 
 ---
 
-> Back Step: **[TypeScript Setup](../04-install-dependencies/README.md)**
+> Back Step: **[Install Dependencies](../04-install-dependencies/README.md)**
 
 > Next Step: **[Prettier Setup](../06-prettier-setup/README.md)**

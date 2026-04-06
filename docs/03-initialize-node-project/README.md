@@ -259,4 +259,4 @@ If you're curious about what `yarn init -y` would have produced instead — with
 
 > Back Step: **[Clone Repository](../02-clone-repository/README.md)**
 
-> Next Step: **[Initialize Node Project](../04-install-dependencies/README.md)**
+> Next Step: **[Install Dependencies](../04-install-dependencies/README.md)**

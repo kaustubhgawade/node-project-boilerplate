@@ -254,4 +254,6 @@ Depending on the options you selected earlier, your repository may contain some 
 
 In the next step, we will bring this repository **from GitHub to our local machine** so we can start building the project.
 
+---
+
 >  Next step: **[Clone Repository](../02-clone-repository/README.md)**
