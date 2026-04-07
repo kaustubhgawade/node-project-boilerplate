@@ -419,4 +419,9 @@ This tells TypeScript which folders to ignore completely.
 - `dist` — already compiled output. No point compiling it again
 
 ---
+
 That covers every field in our config. Nothing in there is arbitrary — every setting has a reason, and now you know what each one is.
+
+---
+
+> ← Back to [TypeScript Setup](./README.md)

@@ -10,8 +10,7 @@
 In the previous step, we configured TypeScript for our project. Our code now has type safety in place.
 
 But type safety is only one part of writing good code. The other part is consistency — making sure every file in your project looks and feels the same, regardless of who wrote it or which editor they used.
-
-That is what this step is about.
+ 
 
 ## What You Will Learn in This Step
 In this step we will learn how to:
@@ -123,6 +122,74 @@ If there are files that do not match the config, Prettier will list them. To aut
 yarn prettier --write .
 ```
 This formats every file in the project according to your .prettierrc config.
+
+---
+
+## The Prettier VS Code Extension
+You may have come across the Prettier - Code formatter extension in the VS Code marketplace. A common question is — if I already have Prettier installed in my project, do I still need the extension? Are they the same thing?
+
+They are not the same thing. They serve different purposes and you need both.
+
+Here is the distinction:   
+- **Prettier installed in your project** (devDependencies) is the actual formatter. It is what runs when you execute `yarn prettier --write .` in the terminal. It is what your CI pipeline will use to check formatting. It is the source of truth for your entire team.
+- **The VS Code extension** is a bridge between your editor and that installed package. It allows VS Code to trigger Prettier automatically — on every save, on every paste, or on demand — without you having to run a terminal command each time. Without the extension, VS Code has no idea Prettier exists. Without the package, the extension has nothing to run.
+
+Install the extension from the VS Code marketplace:
+👉 [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
+
+Once installed, add these settings to your VS Code workspace settings (`.vscode/settings.json`):
+```json
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
+```
+
+`editor.defaultFormatter` — tells VS Code to use Prettier as the default formatter for all files
+`editor.formatOnSave` — automatically runs Prettier every time you save a file
+
+With this in place, you never have to think about formatting again. Save the file, Prettier handles it.
+
+> **Should you commit** `.vscode/settings.json` to GitHub? Yes — commit it. This ensures every developer who clones the project gets the same VS Code behaviour automatically. No manual setup required on their end.
+
+--- 
+
+## Prettier vs ESLint — Where One Ends and the Other Begins
+Since ESLint is the next step, it is worth drawing this boundary clearly before you get there.
+
+Prettier handles how your code looks. ESLint handles how your code works.
+
+Prettier cares about formatting — indentation, quotes, semicolons, line length. ESLint cares about code quality — unused variables, unreachable code, potential bugs, and enforcing best practices.
+
+They are complementary tools, not competing ones. In a production project you need both — Prettier to keep code consistent, ESLint to keep code correct.
+
+---
+
+## Running Prettier as a Script
+Instead of remembering the full `yarn prettier --write .` command every time, add a script to your `package.json`:
+```json
+"scripts": {
+  "format": "prettier --write .",
+  "format:check": "prettier --check ."
+}
+```
+Now anyone on the team can run:
+```bash
+yarn format
+```
+to format the entire project, or:
+```bash
+yarn format:check
+```
+to check formatting without making any changes. Clean, simple, and consistent across the team.
+
+#### Taking It Further — Git Hooks and GitHub Actions
+Right now Prettier runs when someone manually calls yarn format. But in a real production project, you want formatting to be automatic and enforced — not dependent on a developer remembering to run a command.  
+Two things make this possible:
+- Git hooks with husky and lint-staged — Prettier runs automatically before every commit. If the code is not formatted, the commit does not go through. We will set this up in a later step.
+- GitHub Actions — Prettier runs as part of your CI pipeline on every pull request. If formatting check fails, the PR cannot be merged. This is the last line of defence that ensures nothing slips through regardless of local setup. 
+
+We will get to these steps in futher blogs, hang on till than.
 
 ---
 
