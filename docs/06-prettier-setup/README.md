@@ -201,4 +201,4 @@ Your project now has consistent, enforced formatting in place. Every file will l
 
 > Back Step: **[TypeScript Setup](../04-install-dependencies/README.md)**
 
-> Next Step: **[ESLint Setup](../06-prettier-setup/README.md)**
+> Next Step: **[ESLint Setup](../07-eslint-setup/README.md)**
