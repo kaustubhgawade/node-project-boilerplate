@@ -1,5 +1,7 @@
 # Step 02 — Clone the Repository
 
+**Course Progress:** `02 / 08`
+
 📅 **Published:** 15 March 2026  
 🔄 **Last Updated:** 15 March 2026  
 ✍️ **Maintained By:** Kaustubh Gawade

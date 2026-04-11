@@ -1,4 +1,5 @@
 # Step 06 — Setup Prettier
+
 **Course Progress:** `06 / 08`
 
 📅 **Published**: 05 April 2026  

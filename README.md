@@ -19,9 +19,10 @@ Follow these steps to create a production-ready Node.js project.
 5. [TypeScript Setup](docs/05-typescript-setup/README.md)
 6. [Prettier Setup](docs/06-prettier-setup/README.md)
 7. [ESLint Setup](docs/07-eslint-setup/README.md)
-8. [Project Structure](docs/08-project-structure/README.md)
-9. [GitHub Actions](docs/09-github-actions/README.md)
-10. [Versioning](docs/10-versioning/README.md)
+8. [Husky Setup](docs/08-husky-setup/README.md)
+9. [Project Structure](docs/09-project-structure/README.md)
+10. [GitHub Actions](docs/10-github-actions/README.md)
+11. [Versioning](docs/11-versioning/README.md)
 
 ---
 
