@@ -230,6 +230,6 @@ Your project now has both formatting and linting fully in place. Prettier keeps 
 
 ---
 
-Back Step: [Prettier Setup](../06-prettier-setup/README.md)
+> Back Step: **[Prettier Setup](../06-prettier-setup/README.md)**
 
-Next Step: [Husky Setup](../08-husky-setup/README.md)
+> Next Step: **[Husky Setup](../08-husky-setup/README.md)**
